@@ -1,0 +1,66 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta charset='UTF-8'/>
+		<link rel='stylesheet' href='css/mesh.css' type='text/css' />
+	</head>
+	<body>
+		<div id="container"></div>
+		
+		<div class="infobtn">?</div>
+
+		<div class="company-help red">
+			<span class="image image-interactive"></span><strong>Perspektivwechsel</strong>
+			<p>Die Breitbandlandschaft aus einer anderen Perspektive. Erkunden Sie die Berge und Täler der Breitbandgeschwindigkeit in Berlin.</p>
+			<p class="legend">Nutzen Sie die Buttons auf der rechten Seite:</p>
+			<p><span class="image image-fullscreen"></span>Vollbildmodus aktivieren</p>
+			<p><span class="image image-screenshot"></span>Screenshots herunterladen</p>
+			<p><span class="image image-instagram"></span>Instagram Daten anzeigen</p>
+			<p><span class="image image-twitter"></span>Twitter Daten anzeigen</p>
+		</div>
+
+		<div id="labels"></div>
+
+		<div class="time">
+			<div class="clock"></div>
+			<div class="date"></div>
+		</div>
+
+		<ul class="menu">
+			<li><a class="fullscreen"></a></li>
+			<li><a class="screenshot"></a></li>
+			<li><a class="instagram"></a></li>
+			<li><a class="twitter"></a></li>
+		</ul>
+		<script type="text/javascript" src="js/min/breitband.mesh-min.js"></script>
+		<script type="text/javascript">
+			var threed = threeD();
+
+			$(window).resize(debouncer(function(e){
+				threed.resize();
+			}));
+		</script>
+		<!-- Piwik -->
+		<script type="text/javascript">
+			var _paq = _paq || [];
+			_paq.push(["setCookieDomain", "*.breitband-berlin.de"]);
+			_paq.push(["setDomains", ["*.breitband-berlin.de"]]);
+			_paq.push(['trackPageView']);
+			_paq.push(['enableLinkTracking']);
+
+			(function() {
+				var u="//piwik.technologiestiftung-berlin.de/";
+				_paq.push(['setTrackerUrl', u+'piwik.php']);
+				_paq.push(['setSiteId', 3]);
+				var d=document, g=d.createElement('script'),
+					s=d.getElementsByTagName('script')[0];
+				g.type='text/javascript'; g.async=true; g.defer=true;
+				g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+			})();
+		</script>
+		<noscript><p><img src="//piwik.technologiestiftung-berlin.de/piwik.php?idsite=3" style="border:0;" alt="" /></p></noscript>
+		<!-- End Piwik Code -->
+	</body>
+</html>
